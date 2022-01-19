@@ -1,0 +1,39 @@
+<div class="m-dialog-invoice-detail">
+    <h1 mat-dialog-title>Detalle de la Factura #{{invoice.numeroFactura}}</h1>
+    <div mat-dialog-content>
+        <div class="info-invoice">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><span class="label-info">Nombre:</span></td>
+                        <td><span class="value-info">{{invoice.nombre}} {{invoice.apellido}}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="label-info">Número Documento:</span></td>
+                        <td><span class="value-info">{{invoice.numeroDocumento}}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="label-info">Teléfono:</span></td>
+                        <td><span class="value-info">{{invoice.telefono}}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="label-info">Dirección:</span></td>
+                        <td><span class="value-info">{{invoice.direccion}}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="label-info">Fecha de Entrega:</span></td>
+                        <td><span class="value-info">{{invoice.fechaEntrega}}</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="label-info">Fecha Pedido:</span></td>
+                        <td><span class="value-info">{{invoice.fechaPedido}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <app-table [dataSource]="invoice.detalleFactura" [columns]="columns" [displayedColumns]="displayedColumns"></app-table>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button [mat-dialog-close] cdkFocusInitial>Cerrar</button>
+    </div>
+</div>

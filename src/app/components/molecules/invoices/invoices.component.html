@@ -1,0 +1,4 @@
+<mat-card>
+    <h2>Facturas</h2>
+    <app-table [dataSource]="invoiceList" [columns]="columns" [displayedColumns]="displayedColumns" (handleClick)="openDialog($event)"></app-table>
+</mat-card>

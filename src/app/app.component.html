@@ -1,0 +1,25 @@
+<mat-drawer-container class="main-menu">
+	<mat-drawer mode="side" opened class="menu">
+		<mat-nav-list class="main-menu">
+			<a mat-list-item routerLink="/product">
+				<!-- <mat-icon class="mr-2 text-white">{{menu.icon}}</mat-icon> -->
+				<span class="text-white mt-1">Productos</span>
+			</a>
+			<a mat-list-item routerLink="/shopping-cart">
+				<!-- <mat-icon class="mr-2 text-white">{{menu.icon}}</mat-icon> -->
+				<span class="text-white mt-1">Carrito de compras</span>
+			</a>
+			<a mat-list-item routerLink="/invoice">
+				<!-- <mat-icon class="mr-2 text-white">{{menu.icon}}</mat-icon> -->
+				<span class="text-white mt-1">Facturas</span>
+			</a>
+		</mat-nav-list>
+	</mat-drawer>
+	<mat-drawer-content>
+		<section class="section-header">
+		</section>
+		<section class="section-body">
+			<router-outlet></router-outlet>
+		</section>
+	</mat-drawer-content>
+</mat-drawer-container>
